@@ -11,6 +11,4 @@ import tot.tools.service.ConditionalClass;
 @ConditionalOnClass(ConditionalClass.class)
 public class AutoConfig {
 	
-	
-
 }
