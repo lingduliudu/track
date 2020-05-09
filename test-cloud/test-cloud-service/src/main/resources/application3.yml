@@ -1,0 +1,27 @@
+spring:
+   profiles:
+      active: dev
+   application:
+      name: service-provider
+   cloud:
+      nacos:
+         discovery:
+            server-addr: localhost:8848
+            namespace: unique-1
+            cluster-name: DEFAULT
+         config:
+            server-addr: localhost:8848
+            file-extension: yaml
+            namespace: unique-1
+            data-ids: dev.yml
+            group: DEFAULT_GROUP
+
+server:
+   port: 56020 
+   servlet:
+      context-path: /service-provider
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

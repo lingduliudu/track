@@ -1,0 +1,25 @@
+server:
+   port: 56021 
+   servlet:
+      context-path: /nacos-provide
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+   application:
+      name: nacos-provide
+   cloud: 
+      nacos:
+         discovery:
+            server-addr: 192.168.21.168:8848
+            namespace: unique-1
+            cluster-name: DEFAULT
+         config:
+            server-addr: 192.168.21.168:8848
+            file-extension: yaml
+            namespace: unique-1
+            data-ids: dev.yaml
+            group: DEFAULT_GROUP
+
